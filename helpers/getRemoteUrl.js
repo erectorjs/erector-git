@@ -2,7 +2,7 @@ import { exec } from 'erector';
 
 const getAddrFromOriginExpr = /^origin[\s]+([^ ]*)[\s]+\(fetch\)$/mi;
 
-export default function* getGitRemoteUrl(cwd) {
+export default function* getGitRemoteUrl({ cwd }) {
   const origin = yield exec('git remote -v', cwd ? {
     cwd,
   } : undefined);

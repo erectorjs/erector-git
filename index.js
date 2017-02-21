@@ -3,7 +3,7 @@ import { echo, clear } from 'erector';
 export { default as getRemoteUrl } from './helpers/getRemoteUrl';
 export { default as getRemoteBranches } from './helpers/getRemoteBranches';
 export { default as getRoot } from './helpers/getRoot';
-export { default as gitCurrentBranch } from './helpers/getCurrentBranch';
+export { default as getCurrentBranch } from './helpers/getCurrentBranch';
 
 function* introduce() {
   yield clear();
