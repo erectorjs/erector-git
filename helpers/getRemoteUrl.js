@@ -1,14 +1,13 @@
 import { exec } from 'erector';
 
-const getAddrFromOriginExpr = /^origin[\s]+([^ ]*)[\s]+\(fetch\)$/mi;
-
 export default function* getGitRemoteUrl({ cwd }) {
-  const origin = yield exec('git remote -v', cwd ? {
+  const origin = yield exec('git remote get-url origin', cwd ? {
     cwd,
   } : undefined);
   const purl = getAddrFromOriginExpr.exec(origin.trim());
-  if (!purl) {
+  const url = purl.trim();
+  if (!url) {
     throw new Error("There is no remote url");
   }
-  yield purl[1].trim();
+  return url;
 }

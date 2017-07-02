@@ -4,6 +4,8 @@ export { default as getRemoteUrl } from './helpers/getRemoteUrl';
 export { default as getRemoteBranches } from './helpers/getRemoteBranches';
 export { default as getRoot } from './helpers/getRoot';
 export { default as getCurrentBranch } from './helpers/getCurrentBranch';
+export { default as getCurrentBranchCommits } from './helpers/getCurrentBranchCommits';
+export { default as getBranch } from './helpers/getBranch';
 
 function* introduce() {
   yield clear();

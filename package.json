@@ -1,6 +1,6 @@
 {
   "name": "erector-git",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Set of Erector helpers for working with Git",
   "main": "index.js",
   "engines": {
