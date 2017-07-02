@@ -4,7 +4,7 @@ const getBranchExpr = /^[\*]?[\s]+([^\n]+)/mi;
 const getBranchDataExpr = /^-e ([^\s]+) ([^\s]+) ([^\s]+) ([^|]+)\|(.+)$/i;
 const getBranchExprNoAliasExpr = /^[^\/]+\/(.+)$/mi;
 
-export default function* getGitRemoteBranches({ cwd, format = 'short' }) {
+export default function* getGitRemoteBranches({ cwd, format = 'short' } = {}) {
   const branches = yield exec('for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1`\\|$branch; done | sort', cwd ? {
     cwd,
   } : undefined);

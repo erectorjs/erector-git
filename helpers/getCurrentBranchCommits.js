@@ -20,7 +20,7 @@ const fieldsToOptions = {
 export default function* getCurrentBranchCommits({
   cwd,
   options = ['%H'],
-}) {
+} = {}) {
   const cmd = `git log --pretty=format:"${options.join("\t")}"`;
   const output = yield exec(`git log --pretty=format:"${options.join("\t")}"`, cwd ? {
     cwd,

@@ -1,6 +1,6 @@
 import { exec } from 'erector';
 
-export default function* getGitRemoteUrl({ cwd }) {
+export default function* getGitRemoteUrl({ cwd } = {}) {
   const origin = yield exec('git remote get-url origin', cwd ? {
     cwd,
   } : undefined);
