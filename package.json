@@ -17,7 +17,7 @@
     "erector",
     "helpers"
   ],
-  "author": "Vladimir Kalmykov <luciusmorulus@gmail.com>",
+  "author": "Vladimir Kalmykov <vladimirmorulus@gmail.com>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/Morulus/erector-git#readme"
+  "homepage": "https://github.com/erectorjs/erector-git.git"
 }
