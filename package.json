@@ -1,13 +1,15 @@
 {
   "name": "erector-git",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Set of Erector helpers for working with Git",
-  "main": "index.js",
+  "main": "dist/index.js",
   "engines": {
     "erector": "1.0.0-beta.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "erect build",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
